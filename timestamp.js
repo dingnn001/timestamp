@@ -4,14 +4,14 @@ var moment = require('moment');
 var fs = require('fs');
 var path = require('path');
 
-var port = process.env.PORT || 3500;
+var port = process.env.PORT || 8080;
 
 app.listen(port, function(){
   console.log("Listening on port: " + port);
 });
 
 app.get('/', function(req, res) {
-  var fileName = path.join(__dirname, 'index.html');
+  var fileName = path.join(__dirname, 'timestamp.html');
   res.sendFile(fileName, function (err) {
     if (err) {
       console.log(err);
